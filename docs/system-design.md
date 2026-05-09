@@ -83,11 +83,6 @@ count > 10 이면 429 반환
 - 초기 구현: application.yml에 블랙리스트 도메인 목록.
 - 개선 방향: Google Safe Browsing API 연동.
 
-### 7. 만료 URL: expires_at + @Scheduled
-
-- `expires_at` 컬럼으로 만료 시점 관리.
-- 매일 새벽 3시 Scheduler가 `is_active = false` 처리.
-- Redis TTL은 expires_at 기준으로 자동 만료.
 
 ## 데이터베이스 스키마
 
@@ -99,7 +94,6 @@ url
   original_url_hash VARCHAR(64)  -- SHA-256, 중복 감지용
   is_active       BOOLEAN
   click_count     BIGINT
-  expires_at      DATETIME
   created_at      DATETIME
 
 url_click_log
