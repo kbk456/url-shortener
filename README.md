@@ -92,7 +92,6 @@ curl -X POST http://localhost:8080/api/shorten \
   "shortCode": "1",
   "shortUrl": "http://localhost:8080/1",
   "originalUrl": "https://www.google.com",
-  "expiresAt": null,
   "createdAt": "2026-05-09T10:00:00"
 }
 ```
@@ -117,7 +116,6 @@ curl http://localhost:8080/api/stats/1
   "originalUrl": "https://www.google.com",
   "clickCount": 5,
   "createdAt": "2026-05-09T10:00:00",
-  "expiresAt": null,
   "active": true
 }
 ```
