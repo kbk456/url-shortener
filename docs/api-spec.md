@@ -7,8 +7,7 @@
 **Request**
 ```json
 {
-  "originalUrl": "https://www.example.com/very/long/path",
-  "expiresAt": "2026-12-31T23:59:59"
+  "originalUrl": "https://www.example.com/very/long/path"
 }
 ```
 - `originalUrl`: 필수. http:// 또는 https://로 시작해야 함.
@@ -20,7 +19,6 @@
   "shortCode": "1",
   "shortUrl": "http://localhost:8080/1",
   "originalUrl": "https://www.example.com/very/long/path",
-  "expiresAt": "2026-12-31T23:59:59",
   "createdAt": "2026-05-09T10:00:00"
 }
 ```
@@ -60,7 +58,6 @@ Location: https://www.example.com/very/long/path
   "originalUrl": "https://www.example.com/very/long/path",
   "clickCount": 42,
   "createdAt": "2026-05-09T10:00:00",
-  "expiresAt": "2026-12-31T23:59:59",
   "active": true
 }
 ```
