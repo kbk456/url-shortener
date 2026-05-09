@@ -13,23 +13,8 @@ brew install k6
 ./gradlew bootRun
 ```
 
-## 테스트 1: URL 생성 (POST /api/shorten)
 
-```bash
-k6 run k6/shorten-test.js
-```
-
-**시나리오**
-- 0→5 VU (10s) → 5→20 VU (30s) → 20→0 VU (10s)
-- 각 VU는 1초 대기 후 반복
-
-**주요 관찰 지점**
-- `http_req_duration` p95 < 500ms 기준 통과 여부
-- Rate Limit(10 req/min/IP) 작동 확인 → 429 응답 확인
-
----
-
-## 테스트 2: Redirect (GET /{shortCode})
+## 테스트 1: Redirect (GET /{shortCode})
 
 ```bash
 k6 run k6/redirect-test.js
